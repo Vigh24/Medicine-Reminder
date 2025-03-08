@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
+import { 
+  View, 
+  Text, 
+  StyleSheet, 
   TouchableOpacity,
   SafeAreaView,
   Platform,
@@ -346,19 +346,19 @@ export default function HomeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
-  container: {
-    flex: 1,
+    container: {
+      flex: 1,
     paddingHorizontal: 16,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    },
+    header: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     marginVertical: 24,
   },
   headerContent: {
@@ -383,21 +383,21 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
-  },
-  greeting: {
+    },
+    greeting: {
     fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 4,
-  },
-  date: {
-    fontSize: 16,
+      fontWeight: 'bold',
+      marginBottom: 4,
+    },
+    date: {
+      fontSize: 16,
   },
   profileButton: {
     width: 44,
     height: 44,
     borderRadius: 22,
-    justifyContent: 'center',
-    alignItems: 'center',
+      justifyContent: 'center',
+      alignItems: 'center',
     marginLeft: 12,
     shadowColor: '#000',
     shadowOffset: {
@@ -407,11 +407,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 4.65,
     elevation: 8,
-  },
-  profileLetter: {
+    },
+    profileLetter: {
     color: 'white',
     fontSize: 20,
-    fontWeight: 'bold',
+      fontWeight: 'bold',
   },
   statsContainer: {
     flexDirection: 'row',
@@ -419,8 +419,8 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   statCard: {
-    borderRadius: 12,
-    padding: 16,
+      borderRadius: 12,
+      padding: 16,
     width: (width - 48) / 3,
     alignItems: 'center',
     shadowColor: '#000',
@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
   },
   statNumber: {
     fontSize: 24,
-    fontWeight: 'bold',
+      fontWeight: 'bold',
     marginVertical: 8,
   },
   statLabel: {
@@ -473,7 +473,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingVertical: 14,
     flexDirection: 'row',
-    alignItems: 'center',
+      alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -488,9 +488,9 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   addButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
-  },
+      fontSize: 16,
+      fontWeight: '600',
+    },
   quickActions: {
     marginBottom: 24,
   },
@@ -512,7 +512,7 @@ const styles = StyleSheet.create({
     height: 56,
     borderRadius: 16,
     justifyContent: 'center',
-    alignItems: 'center',
+      alignItems: 'center',
     marginBottom: 8,
   },
   actionText: {
@@ -546,10 +546,10 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   menuText: {
-    fontSize: 16,
+      fontSize: 16,
   },
   menuDivider: {
     height: 1,
     width: '100%',
-  },
-});
+    },
+  });

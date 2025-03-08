@@ -1,5 +1,11 @@
 import { useRef, useEffect } from 'react';
-import { Animated } from 'react-native';
+import { Animated, Easing, Platform } from 'react-native';
+
+const THEME_TRANSITION_CONFIG = {
+  duration: Platform.OS === 'ios' ? 300 : 250,
+  easing: Easing.bezier(0.4, 0.0, 0.2, 1),
+  useNativeDriver: true,
+};
 
 export const useThemeTransition = (isDark: boolean) => {
   const transition = useRef(new Animated.Value(isDark ? 1 : 0)).current;
@@ -7,8 +13,7 @@ export const useThemeTransition = (isDark: boolean) => {
   useEffect(() => {
     Animated.timing(transition, {
       toValue: isDark ? 1 : 0,
-      duration: 300,
-      useNativeDriver: true,
+      ...THEME_TRANSITION_CONFIG,
     }).start();
   }, [isDark]);
 
@@ -16,6 +21,7 @@ export const useThemeTransition = (isDark: boolean) => {
     return transition.interpolate({
       inputRange: [0, 1],
       outputRange,
+      extrapolate: 'clamp',
     });
   };
 
@@ -23,6 +29,6 @@ export const useThemeTransition = (isDark: boolean) => {
     transition,
     interpolate,
     rotate: interpolate(['0deg', '360deg']),
-    scale: interpolate([1, 0.9]),
+    scale: interpolate([1, 0.95]),
   };
 }; 

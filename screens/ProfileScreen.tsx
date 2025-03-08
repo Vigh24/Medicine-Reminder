@@ -42,7 +42,7 @@ export default function ProfileScreen() {
   const backButtonAnimation = usePressAnimation();
   const formSlide = useSlideIn('bottom', 50, 800);
   const headerFade = useFadeIn(800);
-
+  
   useEffect(() => {
     fetchProfile();
   }, [session]);
